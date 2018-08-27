@@ -11,5 +11,5 @@ public interface PhoneDAO {
     int delPhoneById(String[] id);
     int add(Phone phone);
     int delPhone();
-    List<Phone> getphone(String value);
+    List<Phone> getphone(Object value);
 }

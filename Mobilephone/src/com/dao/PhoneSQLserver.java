@@ -3,7 +3,6 @@ package com.dao;
 
 import com.entity.Phone;
 
-import javax.sql.rowset.JdbcRowSet;
 import java.util.List;
 
 public class PhoneSQLserver implements PhoneDAO {
@@ -46,7 +45,7 @@ public class PhoneSQLserver implements PhoneDAO {
     }
 
     @Override
-    public List<Phone> getphone(String value) {
+    public List<Phone> getphone(Object value) {
         String sql = "select * from Phone where name like ?";
         return JDBCUtil.preparedQuery(Phone.class,sql,"%"+value+"%");
     }

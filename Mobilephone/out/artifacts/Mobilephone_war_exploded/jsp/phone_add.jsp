@@ -8,8 +8,9 @@
     $(function () {
         $("#addbtn").click(function () {
             var param = $("#addForm").serialize();
-            $.post("/phone/add",param,function(data){
+            $.post("/phone/add", param, function (data) {
                 alert(data);
+                $("#addForm")[0].reset();
             });
         });
     })
@@ -20,7 +21,8 @@
     <input type="text" name="colour" class="form-control" placeholder="机身颜色" aria-describedby="sizing-addon1"></br>
     <input type="text" name="price" class="form-control" placeholder="价格" aria-describedby="sizing-addon1"></br>
     <input type="text" name="company" class="form-control" placeholder="生产厂商" aria-describedby="sizing-addon1"></br>
-    <input type="text" name="timetomarket" class="form-control" placeholder="上市时间" aria-describedby="sizing-addon1"></br>
+    <input type="text" name="timetomarket" class="form-control" placeholder="上市时间"
+           aria-describedby="sizing-addon1"></br>
     <input type="text" name="inventory" class="form-control" placeholder="库存" aria-describedby="sizing-addon1"></br>
     <button type="button" class="btn btn-success" id="addbtn">上架</button>
 </form>
