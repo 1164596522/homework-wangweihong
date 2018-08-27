@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<decorators defaultdir="/WEB-INF/layout/">
+
+    <excludes>
+        <pattern>/assets/*</pattern>
+    </excludes>
+
+    <decorator name="phone" page="phone_tpl.jsp">
+        <pattern>/jsp/*</pattern>
+        <pattern>/phone/*</pattern>
+    </decorator>
+
+</decorators>
